@@ -7,8 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Formulário</title>
     <link rel="stylesheet" href="style/style.css">
-    <script defer src="script.js"></script>
     <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer src="script.js"></script>
+  
 </head>
 
 <body>
@@ -22,7 +23,7 @@
 
             <li>
                 <label for="nome">Nome:</label>
-                <input type="text" name="name" placeholder="Fulano de tal..." required />
+                <input id="nome" type="text" name="name" placeholder="Fulano de tal..." required />
                 <span class="form_hint">Formato: "Nome Sobrenome"</span>
             </li>
 
@@ -34,15 +35,16 @@
             </li>
             <li>
                 <label for="website">Endereco:</label>
-                <input type="url" name="website" placeholder="Logradouro" required pattern="(http|https)://.+" />
+                <input type="url" name="website" placeholder="Logradouro" required/>
                 <span class="form_hint">Formato: "http://enderecoDoSite.com"</span>
             </li>
-            <li>
+            
+            <!-- <li>
                 <label for="message">Message:</label>
                 <textarea name="message" cols="40" rows="6" required></textarea>
-            </li>
+            </li> -->
             <li>
-                <button class="submit" type="submit">Enviar Formulário</button>
+                <button class="submit" id= "BTNcad" type="submit">Enviar Formulário</button>
             </li>
 
         </ul>

@@ -1,13 +1,10 @@
 const axios = require("axios");
 const url = "http://127.0.0.1:8080/api/cliente";
+const inputNome = document.querySelector("#nome");
+const inputEmail = document.querySelector('#email');
+const cadastraBTN = document.querySelector("#BTNcad");
 
-let usuario  = {
-	"nome":"Bruce",
-	"nascimento":"1998-03-26 00:00:00",
-	"rg":"36.542.132-7",
-	"email":"bruce@wayne.com",
-	"endereco_id":2 
-}
+
 
 axios.get(url).then(function(resposta){
   console.log(resposta.data.objects);
@@ -17,4 +14,19 @@ axios.get(url).then(function(resposta){
   }
 });
 
-axios.post(url, usuario)
+
+
+function inserePessoa(){
+  let usuario  = {
+    "nome":inputNome.value,
+    "nascimento":" ",
+    "email":inputEmail.value,
+    "rg":" ",
+    "endereco_id":2 
+  }
+  prompt("cadastrado com sucesso");
+
+  axios.post(url, usuario)
+}
+
+cadastraBTN.onclick = inserePessoa;
