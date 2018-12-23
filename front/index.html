@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script defer src="script.js"></script>
+    <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <form class="contact_form" action="" method="post" name="contact_form">
+
+        <ul>
+            <li>
+                <h2>Formulário de Contato</h2>
+                <span class="required_notification">* Denota campo obrigatório</span>
+            </li>
+
+            <li>
+                <label for="nome">Nome:</label>
+                <input type="text" name="name" placeholder="Fulano de tal..." required />
+                <span class="form_hint">Formato: "Nome Sobrenome"</span>
+            </li>
+
+
+            <li>
+                <label for="email">Email:</label>
+                <input type="text" name="email" placeholder="fulano_de_tal@gmail.com" required />
+                <span class="form_hint">Formato: "name@provedor.com"</span>
+            </li>
+            <li>
+                <label for="website">Endereco:</label>
+                <input type="url" name="website" placeholder="Logradouro" required pattern="(http|https)://.+" />
+                <span class="form_hint">Formato: "http://enderecoDoSite.com"</span>
+            </li>
+            <li>
+                <label for="message">Message:</label>
+                <textarea name="message" cols="40" rows="6" required></textarea>
+            </li>
+            <li>
+                <button class="submit" type="submit">Enviar Formulário</button>
+            </li>
+
+        </ul>
+
+
+    </form>
+
+</body>
+
+</html>
